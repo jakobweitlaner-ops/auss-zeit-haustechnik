@@ -1,0 +1,125 @@
+site_name: Auss.Zeit Haustechnik
+site_description: Internes Wiki für Haustechnik, Wartung und Notfälle
+site_author: Auss.Zeit OG
+copyright: Copyright &copy; 2026 Auss.Zeit OG
+
+# Falls du GitHub Pages nutzt, hier die URL eintragen (anpassen nach Repo-Anlage):
+# site_url: https://<dein-github-username>.github.io/auss-zeit-haustechnik/
+
+theme:
+  name: material
+  language: de
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.tabs.link
+    - toc.follow
+  palette:
+    # Hell-Modus
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: brown
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Auf Dark Mode wechseln
+    # Dunkel-Modus
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: brown
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Auf Light Mode wechseln
+  font:
+    text: Inter
+    code: JetBrains Mono
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+
+# Wenn du das Repo erstellt hast, hier eintragen:
+# repo_name: <username>/auss-zeit-haustechnik
+# repo_url: https://github.com/<username>/auss-zeit-haustechnik
+# edit_uri: edit/main/docs/
+
+plugins:
+  - search:
+      lang:
+        - de
+        - en
+  - tags
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+
+nav:
+  - Start: index.md
+  - Notfall:
+      - notfall/index.md
+      - Stromausfall: notfall/stromausfall.md
+      - Wasserrohrbruch: notfall/wasserrohrbruch.md
+      - Heizungsausfall: notfall/heizungsausfall.md
+      - Kontakte: notfall/kontakte.md
+  - Heizung:
+      - heizung/index.md
+      - Pelletheizung: heizung/pelletheizung.md
+      - Wartung: heizung/wartung.md
+      - Störungen & Fehlercodes: heizung/stoerungen.md
+      - Pelletslager: heizung/pelletslager.md
+  - Wasser:
+      - wasser/index.md
+      - Absperrhähne: wasser/absperrhaehne.md
+      - Boiler: wasser/boiler.md
+      - Frostschutz: wasser/frostschutz.md
+  - Strom:
+      - strom/index.md
+      - Hauptverteiler: strom/hauptverteiler.md
+      - Unterverteiler Apartments: strom/unterverteiler-apt.md
+  - Netzwerk:
+      - netzwerk/index.md
+      - WLAN & Router: netzwerk/wlan-router.md
+      - Feratel-Anschluss: netzwerk/feratel-anschluss.md
+  - Apartments:
+      - apartments/index.md
+  - Geräte:
+      - geraete/index.md
+  - Wartungsplan:
+      - wartungsplan/index.md
+      - Jährlich: wartungsplan/jaehrlich.md
+      - Halbjährlich: wartungsplan/halbjaehrlich.md
+      - Saisonal: wartungsplan/saisonal.md
+
+extra:
+  social:
+    - icon: fontawesome/solid/house
+      link: https://www.das-ausszeit.at
+      name: das-ausszeit.at
